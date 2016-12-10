@@ -19,5 +19,22 @@ app.get('/', function(req, res){
 
 
 
+
+//testPost
+app.post('/testPost', urlEncodedParser, function(req, res){
+  console.log('testPost url hit. req.body', req.body);
+
+
+  var objectReturn = {
+    test : 'tester test working'
+  };
+
+res.send(objectReturn);
+
+});
+
+
+
+
 //static folder
 app.use(express.static('public'));

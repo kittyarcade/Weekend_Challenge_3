@@ -1,14 +1,30 @@
 #To-DO:
-[] create needed files
+[X] create needed files
 
-[] set up server
+[X] set up server
+
+[x] link things!
+
+[x] set up html file
+
+[x] create input field for number
+
+[x] create operation selector
+
+[x] clear button
+
+[x] submit button
+
+[] retrieve inputs when clicked
+
+[] create post in client.js
 
 
 
 #Technologies Used:
 * jQuery
-* node
-* express
+* node.js
+* express.js
 * JavaScript
 * HTML
 * Bootstrap

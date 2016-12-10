@@ -15,9 +15,11 @@
 
 [x] submit button
 
-[] retrieve inputs when clicked
+[x] retrieve inputs when clicked
 
-[] create post in client.js
+[x] create post in client.js
+
+[] calculation logic on server side
 
 
 

@@ -1,0 +1,16 @@
+{
+  "name": "weekend_challenge_3",
+  "version": "1.0.0",
+  "description": "###Weekend Challenge 3: Your Own Calculator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start": "node server/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

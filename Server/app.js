@@ -6,6 +6,8 @@ var urlEncodedParser = bodyParser.urlencoded({extended: false});
 var port =  process.env.PORT || 3000;
 
 
+var calcArray = [];
+
 //spin up server
 app.listen(port, function(req, res){
   console.log('server listening on: ', port);
@@ -29,6 +31,8 @@ app.post('/testPost', urlEncodedParser, function(req, res){
     test : 'tester test working'
   };
 
+calcArray.push(req.body);
+console.log('return array: ', calcArray);
 res.send(objectReturn);
 
 });

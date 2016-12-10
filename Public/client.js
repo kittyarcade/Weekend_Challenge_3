@@ -6,15 +6,11 @@ $(document).ready(function(){
 var postData = function(){
   console.log('in postData');
 
-  var objectToSend = {
-    tester: 'test'
-  }; // end object to send
-
   //start AJAX
   $.ajax({
     type: 'POST',
     url: '/testPost',
-    data: objectToSend,
+    data: calculator,
     success: function(response){
        console.log( 'back from post call:', response );
     }
@@ -30,6 +26,11 @@ var postData = function(){
 $('#submit').on('click', function(){
   console.log('testPost on click');
   postData();
+});
+
+$('#clear').on('click', function(){
+    console.log('clear button click');
+    location.reload(true);
 });
 
 

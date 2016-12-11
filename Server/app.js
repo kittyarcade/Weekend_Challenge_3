@@ -6,7 +6,8 @@ var urlEncodedParser = bodyParser.urlencoded({extended: false});
 var port =  process.env.PORT || 3000;
 
 
-var calcArray = [];
+var answer = [];
+
 
 //spin up server
 app.listen(port, function(req, res){
@@ -26,18 +27,34 @@ app.get('/', function(req, res){
 app.post('/testPost', urlEncodedParser, function(req, res){
   console.log('testPost url hit. req.body', req.body);
 
+  var maths = req.body;
 
-  var objectReturn = {
-    test : 'tester test working'
-  };
+  var results = '';
+  var x = parseInt(maths.x);
+  console.log('var x : ', x);
+  var y = parseInt(maths.y);
+  console.log('var y: ', y);
 
-calcArray.push(req.body);
-console.log('return array: ', calcArray);
-res.send(objectReturn);
+  if(maths.type === '+'){
+    results = x+y;
+    console.log(results);
+  } else if(maths.type === '-'){
+    results = x-y;
+  } else if(maths.type === '*'){
+    results = x*y;
+  } else if(maths.type === '/'){
+    results = x / y;
+  }
+
+answer.push(results);
+console.log('answer array: ', answer);
 
 });
 
-
+app.get('/returnAnswer', function(req,res){
+  console.log('base url hit in get');
+  res.send(answer);
+});
 
 
 //static folder

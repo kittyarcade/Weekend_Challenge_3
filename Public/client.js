@@ -16,20 +16,37 @@ $(document).ready(function(){
 var postData = function(){
   console.log('in postData');
 
-
-
   //start AJAX
   $.ajax({
     type: 'POST',
     url: '/testPost',
     data: objectToSend,
     success: function(response){
-       console.log( 'back from post call:', response );
+       console.log( 'back from post call:', response);
     }
 });
-
+answers();
+$('#outputDiv').html(''); //clears total after each calculation
 }; //end postData
 
+
+//GET
+
+var answers = function (){
+  $.ajax({
+    type: 'GET',
+    url: '/returnAnswer',
+    success: function(response) {
+      console.log('get answer: ', response);
+      $('#outputDiv').html('Total: ' + response[response.length-1]);
+
+    }
+
+
+  });
+
+
+};//end GET
 
 
 

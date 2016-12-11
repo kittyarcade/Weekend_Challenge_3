@@ -23,6 +23,8 @@
 
 [x] display results on DOM
 
+[x] style!
+
 
 #Technologies Used:
 * jQuery

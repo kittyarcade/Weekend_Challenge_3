@@ -19,8 +19,9 @@
 
 [x] create post in client.js
 
-[] calculation logic on server side
+[x] calculation logic on server side
 
+[x] display results on DOM
 
 
 #Technologies Used:
